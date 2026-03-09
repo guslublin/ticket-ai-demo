@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "gA8EAzQpu5I=",
+  "success": true,
+  "projectFilePath": "/Users/mac/Documents/GitHub/ticket-ai-demo/backend/api/api.csproj",
+  "expectedPackageFiles": [
+    "/Users/mac/.nuget/packages/microsoft.aspnetcore.openapi/10.0.3/microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/oracle.manageddataaccess.core/23.26.100/oracle.manageddataaccess.core.23.26.100.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.configuration.configurationmanager/8.0.0/system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.diagnostics.performancecounter/8.0.0/system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.directoryservices.protocols/8.0.2/system.directoryservices.protocols.8.0.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.security.cryptography.pkcs/8.0.1/system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.security.cryptography.protecteddata/8.0.0/system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
