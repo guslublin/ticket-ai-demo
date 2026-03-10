@@ -53,3 +53,9 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+.env
+backend/api/bin
+backend/api/obj
+frontend/app/node_modules
+__pycache__

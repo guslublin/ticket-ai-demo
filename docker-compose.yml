@@ -1,0 +1,40 @@
+services:
+  oracle:
+    image: gvenzl/oracle-free:23-slim
+    container_name: ticket-ai-oracle
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: oracle
+      APP_USER: appuser
+      APP_USER_PASSWORD: appuser
+    volumes:
+      - ./database/init:/container-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "healthcheck.sh"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+
+  backend:
+    build: ./backend
+    container_name: ticket-ai-backend
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Oracle: User Id=appuser;Password=appuser;Data Source=oracle:1521/FREEPDB1
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    depends_on:
+      oracle:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend/app
+    container_name: ticket-ai-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_BASE_URL: http://localhost:8080
+    depends_on:
+      - backend

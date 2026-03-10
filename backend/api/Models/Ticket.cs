@@ -7,5 +7,7 @@ public class Ticket
     public string Description { get; set; } = "";
     public string Status { get; set; } = "";
     public string? AiCategory { get; set; }
+    public string? AiPriority { get; set; }
+    public string? AiSummary { get; set; }
     public DateTime CreatedAt { get; set; }
 }
